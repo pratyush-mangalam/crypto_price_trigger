@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # This allows easy placement of apps within the interior
     # todo directory.
     current_path = Path(__file__).parent.resolve()
-    sys.path.append(os.path.join(current_path, "todo"))
+    sys.path.append(os.path.join(current_path, "crypto_price_trigger"))
     if os.environ["DJANGO_SETTINGS_MODULE"] != "config.settings.test":
         env = environ.Env()
         # OS environment variables take precedence over variables from .env

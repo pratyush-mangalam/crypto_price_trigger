@@ -1,0 +1,16 @@
+DJANGO_SECRET_KEY=django-insecure-t^*4c12p%_^=1c75fm$nb-2bcp)osf&u78dtw#rh_b@+2+es#g
+DJANGO_DEBUG=True
+POSTGRES_DB=stock
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+REDIS_URL=redis://127.0.0.1:6379/1
+JWT_SECRET_KEY=XNukfUqa0jNmcvNrZtthJjUC3fOWoXUO
+SALT=Y5FCmLVWhX
+EMAIL_HOST=test.ubuntu.local
+EMAIL_HOST_USER=test@ubuntu.local
+EMAIL_HOST_PASSWORD=27,MENeta,:
+CELERY_BROKER_URL=redis://localhost:6379/1
+# amqp://guest:guest@localhost:5672//
+CELERY_RESULT_BACKEND=redis://127.0.0.1:6379/1

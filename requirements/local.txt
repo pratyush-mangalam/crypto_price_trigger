@@ -1,0 +1,36 @@
+-r base.txt
+
+ipdb==0.13.13  # https://github.com/gotcha/ipdb
+
+# Testing
+# ------------------------------------------------------------------------------
+mypy>=0.761  # https://github.com/python/mypy
+pytest==7.3.1  # https://github.com/pytest-dev/pytest
+
+
+
+# Code quality
+# ------------------------------------------------------------------------------
+flake8==5.0.4  # https://github.com/PyCQA/flake8
+coverage==7.*  # https://github.com/nedbat/coveragepy
+pytest-cov==4.*
+black==22.*  # https://github.com/ambv/black
+pylint-django==2.0.13  # https://github.com/PyCQA/pylint-django
+pre-commit==2.17.0  # https://github.com/pre-commit/pre-commit
+
+# Django
+# ------------------------------------------------------------------------------
+factory-boy==2.12.0  # https://github.com/FactoryBoy/factory_boy
+
+django-extensions==2.2.5  # https://github.com/django-extensions/django-extensions
+django-coverage-plugin==1.6.0  # https://github.com/nedbat/django_coverage_plugin
+pytest-django==3.7.0  # https://github.com/pytest-dev/pytest-django
+time-machine>=2.5.0
+PyPDF2==1.26.0
+responses==0.18.0
+
+jwt==1.3.1
+websocket-client==1.5.1
+celery==5.2.7
+django-redis==5.2.0
+redis==4.5.4

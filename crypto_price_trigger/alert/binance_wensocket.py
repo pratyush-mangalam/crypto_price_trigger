@@ -3,8 +3,9 @@ import json
 
 import websockets
 
+from crypto_price_trigger.alert.models import Alert
 from crypto_price_trigger.alert.tasks import send_email_task
-from crypto_price_trigger.utils.redis_operation import get_alert_from_redis
+from crypto_price_trigger.utils.redis_operation import get_alert_from_redis, delete_alert_from_redis
 
 event_loop = asyncio.new_event_loop()
 
@@ -36,7 +37,7 @@ async def binance_websocket_api(email, symbol, set_price, alert_id):
                 return
 
             # Compare the current price with the set price
-            if current_price > set_price:
+            if current_price >= set_price:
                 # Trigger the desired action, such as sending an email notification
                 data = {
                     'email': email,
@@ -45,6 +46,10 @@ async def binance_websocket_api(email, symbol, set_price, alert_id):
                     'set_price': set_price
                 }
                 send_email_task.delay(json.dumps(data))
+                alert = Alert.objects.get(id=alert_id)
+                alert.status = "Triggered"
+                alert.save()
+                delete_alert_from_redis(email=email, symbol=symbol.lower(), alert_id=alert_id)
                 await websocket.close()
                 return
 

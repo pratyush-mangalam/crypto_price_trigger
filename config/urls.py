@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("users/", include('users.urls')),
-    path("alert/", include('alert.urls')),
+    path("users/", include('crypto_price_trigger.users.urls')),
+    path("alert/", include('crypto_price_trigger.alert.urls')),
 ]

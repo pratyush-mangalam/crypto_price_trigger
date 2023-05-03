@@ -1,6 +1,6 @@
 from django.db import models
 
-from users.models import Users
+from crypto_price_trigger.users.models import Users
 
 
 class Alert(models.Model):
