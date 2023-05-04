@@ -14,6 +14,6 @@ django-model-utils==4.0.0  # https://github.com/jazzband/django-model-utils
 
 # Django REST Framework
 # ------------------------------------------------------------------------------
-djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
+djangorestframework==3.14.0  # https://github.com/encode/django-rest-framework
 PyYAML==5.2  # https://github.com/yaml/pyyaml
 PyJWT==2.6.0
